@@ -52,7 +52,7 @@ This repo covers both. The engineering camp gets more space.
 - [🔭 Context Engineering](#context-engineering)
 - [🤖 Agent Ecosystem](#agent-ecosystem) — MCP, Skills, Harness
 - [📖 Official Guides](#official-guides)
-- [📄 Papers](#papers) — Foundations, Optimization, Reasoning, RAG, Agents, Evaluation, Memory, Multimodal
+- [📄 Papers](#papers) — Foundations, Optimization, Reasoning, RAG, Agents, Multi-Agent, Safety, Tool Use, Evaluation, Memory, Multimodal
 - [🛠 Tools & Libraries](#tools--libraries)
 
 ---
@@ -68,6 +68,9 @@ All prompts are open — click, copy, use directly.
 | 🤖 Agentic Coder | Plan-first coding agent — security checklist, test discipline, PR summary format (2025) | [prompt](https://github.com/ai-boost/awesome-prompts/blob/main/prompts/agentic_coder.txt) |
 | 🔍 Code Reviewer | Security-focused code reviewer — OWASP Top 10, severity grading, fix examples (2026) | [prompt](https://github.com/ai-boost/awesome-prompts/blob/main/prompts/code_reviewer_security.txt) |
 | 🕸 Multi-Agent Orchestrator | Central dispatch agent — task decomposition, parallel delegation, state tracking, error recovery (2026) | [prompt](https://github.com/ai-boost/awesome-prompts/blob/main/prompts/multi_agent_orchestrator.txt) |
+| 🗄 SQL Assistant | Senior DB engineer — query writing (CTE-first), optimization (EXPLAIN-driven), schema design, multi-dialect (2026) | [prompt](https://github.com/ai-boost/awesome-prompts/blob/main/prompts/sql_assistant.txt) |
+| 🐛 Debugging Agent | Systematic bug hunter — reproduce → observe → hypothesize → test → localize → fix; works for any language (2026) | [prompt](https://github.com/ai-boost/awesome-prompts/blob/main/prompts/debugging_agent.txt) |
+| 🏗 System Design | Staff-level architect — clarifies requirements first, capacity estimation, component trade-offs, failure modes (2026) | [prompt](https://github.com/ai-boost/awesome-prompts/blob/main/prompts/system_design.txt) |
 | ⚡ Claude Artifacts | System prompt for generating rich Claude Artifacts (UI, interactive apps, code) | [prompt](https://github.com/ai-boost/awesome-prompts/blob/main/prompts/claude_artifacts_prompt.md) |
 | 💻 Professional Coder | Expert coding assistant — auto programming, project generation, any language | [prompt](https://github.com/ai-boost/awesome-prompts/blob/main/prompts/%F0%9F%92%BBProfessional%20Coder.md) |
 
@@ -298,6 +301,8 @@ Context engineering is the practice of designing *what* goes into an LLM's conte
 | [**Microsoft Agent Framework**](https://github.com/microsoft/agent-framework) | Microsoft | Unified successor to AutoGen + Semantic Kernel — event-driven actor model, multi-agent orchestration (8.3k ★, RC 2026) |
 | [**openai/codex**](https://github.com/openai/codex) | OpenAI | Lightweight agentic coding CLI — o3/o4-mini powered, runs in terminal, 68k ★ (Apr 2025, active 2026) |
 | [**DeerFlow 2.0**](https://github.com/bytedance/deer-flow) | ByteDance | Long-horizon "SuperAgent" — filesystem, sandboxed execution, persistent memory, parallel sub-agents, skill system; LangGraph-based; 53k ★, hit #1 GitHub Trending on launch day (Feb 28, 2026) |
+| [**smolagents**](https://github.com/huggingface/smolagents) | HuggingFace | Minimal code-first agent framework (~1000 LOC core) — MCP integration, multi-agent hierarchies, multimodal I/O, 100+ model providers; 26k ★ |
+| [**browser-use**](https://github.com/browser-use/browser-use) | OSS | AI-driven browser automation — agents control a real browser to complete web tasks; 89% on WebVoyager benchmark; widely integrated; 81k ★ |
 
 > **Feb 2026 multi-agent wave:** In a two-week window, Claude Code Agent Teams, Windsurf parallel agents (5), Grok Build (8 agents), Codex CLI, and Devin parallel sessions all shipped simultaneously — multi-agent is now the baseline, not a feature.
 
@@ -307,6 +312,15 @@ Open protocol (Anthropic, Nov 2024) for connecting LLMs to tools and data. Now a
 
 - Spec: [modelcontextprotocol.io](https://modelcontextprotocol.io/specification/2025-11-25)
 - Official servers: [github.com/modelcontextprotocol/servers](https://github.com/modelcontextprotocol/servers)
+
+### A2A — Agent-to-Agent Protocol
+
+Open protocol (Google, Apr 2025 → Linux Foundation, Mar 2026) for cross-framework agent communication. Where MCP connects agents *to tools*, A2A connects *agents to agents* — enabling delegation, negotiation, and handoff across different frameworks and vendors. v1.0.0 released March 2026 with gRPC support, Agent Card signing, and Python/JS/Go SDKs. 22.9k ★, 150+ adopters (Atlassian, Box, Salesforce, SAP, Cohere, MongoDB…).
+
+- GitHub: [a2aproject/A2A](https://github.com/a2aproject/A2A)
+- Docs: [google.github.io/adk-docs/a2a/](https://google.github.io/adk-docs/a2a/)
+
+**MCP vs A2A in one line:** MCP = agent ↔ tool. A2A = agent ↔ agent.
 
 ### Agent Skills
 
@@ -368,6 +382,7 @@ The infrastructure layer that wraps an LLM: tool access, lifecycle management, p
 | **Google** | [Gemini Prompting Best Practices](https://ai.google.dev/docs/prompt_best_practices) | Prompting |
 | **OpenAI** | [Codex CLI Prompting Guide](https://developers.openai.com/cookbook/examples/gpt-5/codex_prompting_guide) (Feb 2026) | Agentic Coding |
 | **DeepSeek** | [DeepSeek Prompt Library](https://api-docs.deepseek.com/prompt-library) | Prompting |
+| **xAI** | [Grok Code Prompt Engineering Guide](https://docs.x.ai/docs/guides/grok-code-prompt-engineering) (2026) | Agentic Coding |
 | **Brex** | [Prompt Engineering (production-focused)](https://github.com/brexhq/prompt-engineering) | Engineering |
 
 ---
@@ -427,12 +442,31 @@ The infrastructure layer that wraps an LLM: tool access, lifecycle management, p
 | [Towards a Science of AI Agent Reliability (2026)](https://arxiv.org/abs/2602.16666) | 12 concrete reliability metrics across consistency, robustness, predictability, safety — capability gains ≠ reliability gains | [PDF](papers/Towards_Science_of_AI_Agent_Reliability.pdf) |
 | [Agentic Reasoning for LLMs (2026)](https://arxiv.org/abs/2601.12538) | Comprehensive survey: 3-layer framework (single-agent capabilities → self-evolving agents → multi-agent coordination); 202 Hugging Face likes | [PDF](papers/Agentic_Reasoning_for_Large_Language_Models.pdf) |
 
+### Multi-Agent Coordination
+
+| Paper | Key Contribution |
+|-------|-----------------|
+| [G2CP: Graph-Grounded Communication Protocol for Multi-Agent Reasoning (2026)](https://arxiv.org/abs/2602.13370) | Replaces free-text agent messages with explicit graph operations (traversal, subgraph fragments, updates) over a shared knowledge graph — 73% token reduction, 34% accuracy improvement, fully auditable reasoning chains | [PDF](papers/G2CP_Graph_Grounded_Multi_Agent_Communication_Protocol.pdf) |
+
+### Agent Safety
+
+| Paper | Key Contribution |
+|-------|-----------------|
+| [BeSafe-Bench: Behavioral Safety Risks of Situated Agents (2026)](https://arxiv.org/abs/2603.25747) | First benchmark across 4 real functional domains (Web, Mobile, Embodied VLM/VLA) with 9 safety-risk categories; even the best agent completes <40% of tasks under full safety constraints | [PDF](papers/BeSafe_Bench_Agent_Behavioral_Safety_Risks.pdf) |
+
+### Tool Use
+
+| Paper | Key Contribution |
+|-------|-----------------|
+| [CCTU: Tool Use under Complex Constraints (2026)](https://arxiv.org/abs/2603.15309) | 200-task benchmark across 12 constraint categories (resource, behavior, toolset, response) with step-level validation; no model exceeds 20% completion; models violate constraints in >50% of cases with limited self-correction | [PDF](papers/CCTU_Tool_Use_Complex_Constraints_Benchmark.pdf) |
+
 ### Context & Memory
 
 | Paper | Key Contribution |
 |-------|-----------------|
 | [Active Context Compression (2026)](https://arxiv.org/abs/2601.07190) | Focus agent architecture — autonomously consolidates history into a Knowledge block and prunes stale context; 22.7% token reduction on SWE-bench Lite, no accuracy loss | [PDF](papers/Active_Context_Compression_Autonomous_Memory_Management.pdf) |
 | [AgeMem: Unified Long- and Short-Term Memory for LLM Agents (2026)](https://arxiv.org/abs/2601.01885) | First to unify LTM (add/update/delete) and STM (retrieve/summarize/filter) as tool-based actions via GRPO RL; 7B model achieves +49.59% over no-memory baseline across 5 benchmarks; ICLR 2026 MemAgents Workshop | [PDF](papers/AgeMem_Unified_Long_Short_Term_Memory_LLM_Agents.pdf) |
+| [MSA: Memory Sparse Attention to 100M Tokens (2026)](https://arxiv.org/abs/2603.23516) | End-to-end trainable sparse attention with linear complexity — scales to 100M tokens on 2×A800 GPUs with <9% degradation vs 16K baseline; Memory Interleaving enables multi-hop reasoning across scattered segments | [PDF](papers/MSA_Memory_Sparse_Attention_100M_Tokens.pdf) |
 
 ### Agent Evaluation
 
@@ -477,6 +511,7 @@ The infrastructure layer that wraps an LLM: tool access, lifecycle management, p
 | [langgptai/awesome-claude-prompts](https://github.com/langgptai/awesome-claude-prompts) | Claude-optimized prompts — XML tags, extended thinking, long-context patterns |
 | [langgptai/awesome-deep-research-prompts](https://github.com/langgptai/awesome-deep-research-prompts) | Prompts for OpenAI Deep Research, Gemini Deep Research, Perplexity Labs |
 | [Anthropic Prompt Library](https://docs.anthropic.com/en/prompt-library/library) | Official production-ready prompts from Anthropic |
+| [NirDiamant/Prompt_Engineering](https://github.com/NirDiamant/Prompt_Engineering) | 22 Jupyter Notebook tutorials from basics to advanced — CoT, few-shot, templates, multi-language; 6.9k ★ |
 
 ---
 
