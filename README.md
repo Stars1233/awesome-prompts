@@ -4,6 +4,18 @@
     <img width="650" src="https://raw.githubusercontent.com/ai-boost/awesome-prompts/main/assets/banner.png">
   </p>
   <p align="center">Curated prompts, frameworks, and papers — with an engineering bias.</p>
+  <!-- Keep these links. Translations will automatically update with the README. -->
+  <p align="center">
+    <a href="https://zdoc.app/de/ai-boost/awesome-prompts">Deutsch</a> |
+    <a href="https://zdoc.app/en/ai-boost/awesome-prompts">English</a> |
+    <a href="https://zdoc.app/es/ai-boost/awesome-prompts">Español</a> |
+    <a href="https://zdoc.app/fr/ai-boost/awesome-prompts">français</a> |
+    <a href="https://zdoc.app/ja/ai-boost/awesome-prompts">日本語</a> |
+    <a href="https://zdoc.app/ko/ai-boost/awesome-prompts">한국어</a> |
+    <a href="https://zdoc.app/pt/ai-boost/awesome-prompts">Português</a> |
+    <a href="https://zdoc.app/ru/ai-boost/awesome-prompts">Русский</a> |
+    <a href="https://zdoc.app/zh/ai-boost/awesome-prompts">中文</a>
+  </p>
   <p align="center">
     <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome" /></a>
     <a href="http://makeapullrequest.com"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="PRs Welcome" /></a>
