@@ -40,7 +40,7 @@ This repo covers both. The engineering camp gets more space.
 - [🔭 Context Engineering](#context-engineering)
 - [🤖 Agent Ecosystem](#agent-ecosystem) — MCP, Skills, Harness
 - [📖 Official Guides](#official-guides)
-- [📄 Papers](#papers)
+- [📄 Papers](#papers) — Foundations, Optimization, Reasoning, RAG, Agents, Evaluation, Memory, Multimodal
 - [🛠 Tools & Libraries](#tools--libraries)
 
 ---
@@ -66,6 +66,7 @@ All prompts are open — click, copy, use directly.
 | ✏️ All-around Writer | Professional writing in any style — essays, articles, fiction | [prompt](https://github.com/ai-boost/awesome-prompts/blob/main/prompts/%E2%9C%8F%EF%B8%8FAll-around%20Writer%20%28Professional%20Version%29.md) |
 | 👌 Academic Assistant Pro | Academic writing with a professorial touch — papers, citations, analysis | [prompt](https://github.com/ai-boost/awesome-prompts/blob/main/prompts/%F0%9F%91%8CAcademic%20Assistant%20Pro.md) |
 | 🖋 Literature Professor | Essay writing and literary analysis from a professor's perspective | [prompt](https://github.com/ai-boost/awesome-prompts/blob/main/prompts/Literature_Professor.md) |
+| 📝 Technical Writer | Senior dev-docs writer — Stripe/Twilio/Google standards; blog posts, API docs, release notes, READMEs; no padding (2026) | [prompt](https://github.com/ai-boost/awesome-prompts/blob/main/prompts/technical_writer.txt) |
 
 ### Learning & Education
 
@@ -74,6 +75,7 @@ All prompts are open — click, copy, use directly.
 | 🦌 Mr. Ranedeer v2.7 | Fully customizable AI tutor — depth, learning style, tone, reasoning framework (updated Mar 2025) | [prompt](https://github.com/ai-boost/awesome-prompts/blob/main/prompts/Mr_Ranedeer.txt) |
 | 📗 All-around Teacher | Adaptive tutor — explains anything in 3 minutes, customized to your level | [prompt](https://github.com/ai-boost/awesome-prompts/blob/main/prompts/%F0%9F%93%97All-around%20Teacher.md) |
 | 🚀 LearnOS PRO | Interactive learning assistant with dynamic, personalized explanations | [prompt](https://github.com/ai-boost/awesome-prompts/blob/main/prompts/LearnOS_PRO.txt) |
+| 🏛 Socratic Tutor | Guides students to understanding through questions, not answers — works for any subject (2026) | [prompt](https://github.com/ai-boost/awesome-prompts/blob/main/prompts/socratic_tutor.txt) |
 
 ### Research & Analysis
 
@@ -88,6 +90,7 @@ All prompts are open — click, copy, use directly.
 | Name | Description | Prompt |
 |------|-------------|--------|
 | ✅ GTD Productivity Assistant | Full GTD system — capture, clarify, organize, reflect, weekly review; implicit task detection (2026) | [prompt](https://github.com/ai-boost/awesome-prompts/blob/main/prompts/productivity_assistant_gtd.txt) |
+| 🎧 Customer Support Agent | Empathetic SaaS support agent — single-interaction resolution, tone calibration, escalation rules, no spin (2026) | [prompt](https://github.com/ai-boost/awesome-prompts/blob/main/prompts/customer_support_agent.txt) |
 
 ### Meta & Prompt Engineering
 
@@ -164,6 +167,7 @@ Make prompt quality measurable. Regression tests, benchmarks, and CI/CD for LLM 
 |---------|-------|-------------|
 | [**promptfoo**](https://github.com/promptfoo/promptfoo) | ~19k | Test-driven prompt engineering: regression tests, red teaming, model comparison, CI/CD integration. [Acquired by OpenAI (Mar 2026)](https://openai.com/index/openai-to-acquire-promptfoo/) — remains open source. |
 | [**OpenAI Evals**](https://github.com/openai/evals) | ~18k | Open eval framework and benchmark registry — standardizes LLM performance measurement. |
+| [**Terminal-Bench**](https://github.com/laude-institute/terminal-bench) | — | Real-terminal agent benchmark (Stanford/Laude) — compile code, train models, set up servers in Docker-sandboxed environments; the de facto benchmark for agentic coding (2026). |
 
 ### Red Team & Security
 
@@ -202,7 +206,7 @@ The best way to learn how production AI products are built is to read their syst
 | Repo | Stars | Notes |
 |------|-------|-------|
 | [EliFuzz/awesome-system-prompts](https://github.com/EliFuzz/awesome-system-prompts) | ~131k | **Most comprehensive** — Cursor, Devin, Windsurf, Claude Code, v0, Lovable, Perplexity, Manus, Replit, Warp and 20+ more. Actively maintained. |
-| [x1xhlol/system-prompts-and-models-of-ai-tools](https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools) | — | 5500+ lines across 25+ tools including full tool definitions and internal agent logic |
+| [x1xhlol/system-prompts-and-models-of-ai-tools](https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools) | ~130k | 20,000+ lines across 25+ tools (Claude Code, Cursor, Devin, Lovable, Manus, Windsurf, Kiro, v0, Codex, and more) — full tool definitions and internal agent logic; updated Mar 2026 |
 | [Piebald-AI/claude-code-system-prompts](https://github.com/Piebald-AI/claude-code-system-prompts) | — | Claude Code internal prompts — main system prompt, 18 tool descriptions, Plan/Explore/Task sub-agent prompts, 135+ version changelog |
 | [asgeirtj/system_prompts_leaks](https://github.com/asgeirtj/system_prompts_leaks) | ~35k | ChatGPT, Claude, Gemini system prompts and developer messages |
 | [jujumilk3/leaked-system-prompts](https://github.com/jujumilk3/leaked-system-prompts) | ~14k | Well-organized, includes tool call constraints and persona definitions |
@@ -281,6 +285,7 @@ Context engineering is the practice of designing *what* goes into an LLM's conte
 | [**karpathy/autoresearch**](https://github.com/karpathy/autoresearch) | Karpathy | 630-line self-improving agent — reads its own training code, forms hypotheses, runs experiments overnight (~42k ★, Mar 2026) |
 | [**Microsoft Agent Framework**](https://github.com/microsoft/agent-framework) | Microsoft | Unified successor to AutoGen + Semantic Kernel — event-driven actor model, multi-agent orchestration (8.3k ★, RC 2026) |
 | [**openai/codex**](https://github.com/openai/codex) | OpenAI | Lightweight agentic coding CLI — o3/o4-mini powered, runs in terminal, 68k ★ (Apr 2025, active 2026) |
+| [**DeerFlow 2.0**](https://github.com/bytedance/deer-flow) | ByteDance | Long-horizon "SuperAgent" — filesystem, sandboxed execution, persistent memory, parallel sub-agents, skill system; LangGraph-based; 53k ★, hit #1 GitHub Trending on launch day (Feb 28, 2026) |
 
 > **Feb 2026 multi-agent wave:** In a two-week window, Claude Code Agent Teams, Windsurf parallel agents (5), Grok Build (8 agents), Codex CLI, and Devin parallel sessions all shipped simultaneously — multi-agent is now the baseline, not a feature.
 
@@ -386,6 +391,7 @@ The infrastructure layer that wraps an LLM: tool access, lifecycle management, p
 | [Chain of Draft (2025)](https://arxiv.org/abs/2502.18600) | ≤5 words per reasoning step — 91% of CoT accuracy at 7.6% of the tokens; 76% latency reduction | [PDF](papers/Chain_of_Draft_Thinking_Faster_by_Writing_Less.pdf) |
 | [Think Deep, Not Just Long (2026)](https://arxiv.org/abs/2602.13517) | Longer CoT ≠ better reasoning — identifies "deep-thinking tokens" (high-revision tokens) as the true signal; enables cost-efficient test-time scaling | [PDF](papers/Think_Deep_Not_Just_Long_Measuring_LLM_Reasoning_Effort.pdf) |
 | [ReBalance: Efficient Reasoning with Balanced Thinking (2026)](https://arxiv.org/abs/2603.12372) | Detects overthinking/underthinking via confidence variance and applies steering vectors to redirect reasoning — ICLR 2026; works on DeepSeek-R1, QwQ, o3-class models | [PDF](papers/ReBalance_Efficient_Reasoning_with_Balanced_Thinking.pdf) |
+| [InftyThink: Breaking Length Limits of Long-Context Reasoning (2026)](https://arxiv.org/abs/2503.06692) | "Jagged" iterative reasoning — splits long reasoning into short segments with summaries, enabling unlimited depth without hitting context limits; ICLR 2026; +3–13% on MATH500/AIME24/GPQA | [PDF](papers/InftyThink_Breaking_Length_Limits_Long_Context_Reasoning.pdf) |
 
 ### Surveys
 
@@ -415,6 +421,25 @@ The infrastructure layer that wraps an LLM: tool access, lifecycle management, p
 |-------|-----------------|
 | [Active Context Compression (2026)](https://arxiv.org/abs/2601.07190) | Focus agent architecture — autonomously consolidates history into a Knowledge block and prunes stale context; 22.7% token reduction on SWE-bench Lite, no accuracy loss | [PDF](papers/Active_Context_Compression_Autonomous_Memory_Management.pdf) |
 | [AgeMem: Unified Long- and Short-Term Memory for LLM Agents (2026)](https://arxiv.org/abs/2601.01885) | First to unify LTM (add/update/delete) and STM (retrieve/summarize/filter) as tool-based actions via GRPO RL; 7B model achieves +49.59% over no-memory baseline across 5 benchmarks; ICLR 2026 MemAgents Workshop | [PDF](papers/AgeMem_Unified_Long_Short_Term_Memory_LLM_Agents.pdf) |
+
+### Agent Evaluation
+
+| Paper | Key Contribution |
+|-------|-----------------|
+| [SWE-CI: Evaluating Agents on Codebase Maintenance via CI (2026)](https://arxiv.org/abs/2603.03823) | First CI-loop benchmark for long-term codebase maintainability — 100 tasks spanning 233 days and 71+ consecutive commits; shifts evaluation from static single-fix to dynamic long-horizon reasoning | [PDF](papers/SWE_CI_Evaluating_Agents_Codebase_Maintenance.pdf) |
+| [SWE-Skills-Bench (2026)](https://arxiv.org/abs/2603.15401) | 565 real-world SE tasks measuring whether agent skills actually improve outcomes — 39/49 public skills give zero gain; average improvement only +1.2%; reveals fundamental gap in skill design |
+
+### Instruction Following
+
+| Paper | Key Contribution |
+|-------|-----------------|
+| [MOSAIC: Granular Instruction Following Evaluation (2026)](https://arxiv.org/abs/2601.18554) | Modular benchmark with up to 20 application-oriented generation constraints per prompt; finds compliance degrades with constraint count and position (primacy/recency bias) — exposes multi-instruction conflict effects | [PDF](papers/MOSAIC_Instruction_Following_Granular_Evaluation.pdf) |
+
+### Multimodal Prompting
+
+| Paper | Key Contribution |
+|-------|-----------------|
+| [Graph-of-Mark: Spatial Reasoning via Visual Prompting (2026)](https://arxiv.org/abs/2603.06663) | Overlays scene graphs onto input images at the pixel level to model object relationships — up to +11 percentage points on VQA and localization across 4 datasets, zero-shot | [PDF](papers/Graph_of_Mark_Spatial_Reasoning_Multimodal_Visual_Prompting.pdf) |
 
 **Curated reading list:** [The 2025 AI Engineering Reading List — Latent Space](https://www.latent.space/p/2025-papers)
 
