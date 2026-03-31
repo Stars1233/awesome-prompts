@@ -52,7 +52,7 @@ This repo covers both. The engineering camp gets more space.
 - [🔭 Context Engineering](#context-engineering)
 - [🤖 Agent Ecosystem](#agent-ecosystem) — MCP, Skills, Harness
 - [📖 Official Guides](#official-guides)
-- [📄 Papers](#papers) — Foundations, Optimization, Reasoning, RAG, Agents, Multi-Agent, Safety, Tool Use, Evaluation, Memory, Multimodal
+- [📄 Papers](#papers) — Foundations, Optimization, Reasoning, RAG, Agents, Multi-Agent, Safety, Self-Improving Agents, Tool Use, Evaluation, Memory, Multimodal
 - [🛠 Tools & Libraries](#tools--libraries)
 
 ---
@@ -104,6 +104,8 @@ All prompts are open — click, copy, use directly.
 | 🔬 Deep Research Agent | Multi-step research system prompt — plan, search, cross-check, synthesize (2025) | [prompt](https://github.com/ai-boost/awesome-prompts/blob/main/prompts/deep_research.txt) |
 | 📊 Data Analysis | Extract insights, flag anomalies, recommend specific visualizations | [prompt](https://github.com/ai-boost/awesome-prompts/blob/main/prompts/data_analysis.txt) |
 | 🗂 Structured Output Extractor | Schema-strict JSON extraction — type safety, null handling, multi-record, self-validation (2026) | [prompt](https://github.com/ai-boost/awesome-prompts/blob/main/prompts/structured_output_extractor.txt) |
+| 📈 Investment Research Analyst | Senior equity analyst — business model assessment, financial health, competitive moat, valuation (DCF/comps), bull/bear thesis (2026) | [prompt](https://github.com/ai-boost/awesome-prompts/blob/main/prompts/investment_research_analyst.txt) |
+| 🗺 Market Research Strategist | Market research director — market sizing (bottom-up + top-down), segmentation, competitive map, white-space opportunities, GTM recommendations (2026) | [prompt](https://github.com/ai-boost/awesome-prompts/blob/main/prompts/market_research_strategist.txt) |
 
 ### Productivity & Tasks
 
@@ -167,8 +169,8 @@ Write LM systems as code, not strings. These frameworks treat prompts as compile
 
 | Project | Stars | What it does |
 |---------|-------|-------------|
-| [**DSPy**](https://github.com/stanfordnlp/dspy) | ~33k | Write LM pipelines declaratively, then *compile* — DSPy auto-optimizes prompts and few-shot demonstrations. The strongest engineering-first approach. |
-| [**Guidance**](https://github.com/guidance-ai/guidance) | ~21k | Interleave generation with constraints, regex/CFG, and control flow. Precision output control that goes beyond what prompts alone can achieve. |
+| [**DSPy**](https://github.com/stanfordnlp/dspy) | ![](https://img.shields.io/github/stars/stanfordnlp/dspy?style=flat-square) | Write LM pipelines declaratively, then *compile* — DSPy auto-optimizes prompts and few-shot demonstrations. The strongest engineering-first approach. |
+| [**Guidance**](https://github.com/guidance-ai/guidance) | ![](https://img.shields.io/github/stars/guidance-ai/guidance?style=flat-square) | Interleave generation with constraints, regex/CFG, and control flow. Precision output control that goes beyond what prompts alone can achieve. |
 
 ### Automatic Prompt Optimization
 
@@ -176,8 +178,8 @@ Instead of hand-tuning prompts, these frameworks optimize them automatically usi
 
 | Project | Stars | What it does |
 |---------|-------|-------------|
-| [**TextGrad**](https://github.com/zou-group/textgrad) | ~3.5k | Treats LLM feedback as "textual gradients" and backpropagates them to optimize prompts. Published in Nature. |
-| [**GEPA**](https://github.com/gepa-ai/gepa) | ~3k | Reflective Text Evolution — optimizes prompts, code, and agent configs. Claims +6–20 pts over GRPO on 6 tasks with fewer rollouts. |
+| [**TextGrad**](https://github.com/zou-group/textgrad) | ![](https://img.shields.io/github/stars/zou-group/textgrad?style=flat-square) | Treats LLM feedback as "textual gradients" and backpropagates them to optimize prompts. Published in Nature. |
+| [**GEPA**](https://github.com/gepa-ai/gepa) | ![](https://img.shields.io/github/stars/gepa-ai/gepa?style=flat-square) | Reflective Text Evolution — optimizes prompts, code, and agent configs. Claims +6–20 pts over GRPO on 6 tasks with fewer rollouts. |
 
 ### Eval & Testing
 
@@ -185,8 +187,8 @@ Make prompt quality measurable. Regression tests, benchmarks, and CI/CD for LLM 
 
 | Project | Stars | What it does |
 |---------|-------|-------------|
-| [**promptfoo**](https://github.com/promptfoo/promptfoo) | ~19k | Test-driven prompt engineering: regression tests, red teaming, model comparison, CI/CD integration. [Acquired by OpenAI (Mar 2026)](https://openai.com/index/openai-to-acquire-promptfoo/) — remains open source. |
-| [**OpenAI Evals**](https://github.com/openai/evals) | ~18k | Open eval framework and benchmark registry — standardizes LLM performance measurement. |
+| [**promptfoo**](https://github.com/promptfoo/promptfoo) | ![](https://img.shields.io/github/stars/promptfoo/promptfoo?style=flat-square) | Test-driven prompt engineering: regression tests, red teaming, model comparison, CI/CD integration. [Acquired by OpenAI (Mar 2026)](https://openai.com/index/openai-to-acquire-promptfoo/) — remains open source. |
+| [**OpenAI Evals**](https://github.com/openai/evals) | ![](https://img.shields.io/github/stars/openai/evals?style=flat-square) | Open eval framework and benchmark registry — standardizes LLM performance measurement. |
 | [**Terminal-Bench**](https://github.com/laude-institute/terminal-bench) | — | Real-terminal agent benchmark (Stanford/Laude) — compile code, train models, set up servers in Docker-sandboxed environments; the de facto benchmark for agentic coding (2026). |
 
 ### Red Team & Security
@@ -195,7 +197,7 @@ Probe LLM systems for vulnerabilities before attackers do.
 
 | Project | Stars | What it does |
 |---------|-------|-------------|
-| [**garak**](https://github.com/NVIDIA/garak) | ~7k | LLM vulnerability scanner by NVIDIA — red teaming, prompt injection, jailbreak, and leakage detection. |
+| [**garak**](https://github.com/NVIDIA/garak) | ![](https://img.shields.io/github/stars/NVIDIA/garak?style=flat-square) | LLM vulnerability scanner by NVIDIA — red teaming, prompt injection, jailbreak, and leakage detection. |
 | [**OpenAI: Prompt Injection Defense**](https://openai.com/index/designing-agents-to-resist-prompt-injection/) | — | Official OpenAI guide on designing agents to resist prompt injection — browser agents, defense principles (2026). |
 | [**The Promptware Kill Chain**](https://arxiv.org/abs/2601.09625) | — | Bruce Schneier (Harvard/Lawfare): reframes prompt injection as a 7-stage malware kill chain; 21/36 documented attacks already traverse 4+ stages. Featured at Black Hat 2026. | [PDF](papers/Promptware_Kill_Chain_Prompt_Injections_as_Malware.pdf) |
 
@@ -205,8 +207,8 @@ Beyond basic evals — trace, debug, and monitor LLM systems in production.
 
 | Project | Stars | What it does |
 |---------|-------|-------------|
-| [**DeepEval**](https://github.com/confident-ai/deepeval) | ~7k | Unit testing for LLMs — G-Eval, hallucination, RAG faithfulness, agentic task metrics. |
-| [**Langfuse**](https://github.com/langfuse/langfuse) | ~11k | Open-source LLM engineering platform — tracing, evals, prompt management, A/B experiments. |
+| [**DeepEval**](https://github.com/confident-ai/deepeval) | ![](https://img.shields.io/github/stars/confident-ai/deepeval?style=flat-square) | Unit testing for LLMs — G-Eval, hallucination, RAG faithfulness, agentic task metrics. |
+| [**Langfuse**](https://github.com/langfuse/langfuse) | ![](https://img.shields.io/github/stars/langfuse/langfuse?style=flat-square) | Open-source LLM engineering platform — tracing, evals, prompt management, A/B experiments. |
 
 ### Low-Code & Workflow Platforms
 
@@ -214,8 +216,8 @@ For teams that want to build RAG pipelines and agent workflows without writing e
 
 | Project | Stars | What it does |
 |---------|-------|-------------|
-| [**Dify**](https://github.com/langgenius/dify) | ~100k | Production-grade RAG and agent workflow platform — visual pipeline builder, multi-model support, plugin architecture. |
-| [**Langflow**](https://github.com/langflow-ai/langflow) | ~50k | Drag-and-drop agent and chain builder — good for rapid prototyping of complex pipelines. |
+| [**Dify**](https://github.com/langgenius/dify) | ![](https://img.shields.io/github/stars/langgenius/dify?style=flat-square) | Production-grade RAG and agent workflow platform — visual pipeline builder, multi-model support, plugin architecture. |
+| [**Langflow**](https://github.com/langflow-ai/langflow) | ![](https://img.shields.io/github/stars/langflow-ai/langflow?style=flat-square) | Drag-and-drop agent and chain builder — good for rapid prototyping of complex pipelines. |
 
 ---
 
@@ -225,12 +227,12 @@ The best way to learn how production AI products are built is to read their syst
 
 | Repo | Stars | Notes |
 |------|-------|-------|
-| [EliFuzz/awesome-system-prompts](https://github.com/EliFuzz/awesome-system-prompts) | ~131k | **Most comprehensive** — Cursor, Devin, Windsurf, Claude Code, v0, Lovable, Perplexity, Manus, Replit, Warp and 20+ more. Actively maintained. |
-| [x1xhlol/system-prompts-and-models-of-ai-tools](https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools) | ~130k | 20,000+ lines across 25+ tools (Claude Code, Cursor, Devin, Lovable, Manus, Windsurf, Kiro, v0, Codex, and more) — full tool definitions and internal agent logic; updated Mar 2026 |
+| [EliFuzz/awesome-system-prompts](https://github.com/EliFuzz/awesome-system-prompts) | ![](https://img.shields.io/github/stars/EliFuzz/awesome-system-prompts?style=flat-square) | **Most comprehensive** — Cursor, Devin, Windsurf, Claude Code, v0, Lovable, Perplexity, Manus, Replit, Warp and 20+ more. Actively maintained. |
+| [x1xhlol/system-prompts-and-models-of-ai-tools](https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools) | ![](https://img.shields.io/github/stars/x1xhlol/system-prompts-and-models-of-ai-tools?style=flat-square) | 20,000+ lines across 25+ tools (Claude Code, Cursor, Devin, Lovable, Manus, Windsurf, Kiro, v0, Codex, and more) — full tool definitions and internal agent logic; updated Mar 2026 |
 | [Piebald-AI/claude-code-system-prompts](https://github.com/Piebald-AI/claude-code-system-prompts) | — | Claude Code internal prompts — main system prompt, 18 tool descriptions, Plan/Explore/Task sub-agent prompts, 135+ version changelog |
-| [asgeirtj/system_prompts_leaks](https://github.com/asgeirtj/system_prompts_leaks) | ~35k | ChatGPT, Claude, Gemini system prompts and developer messages |
-| [jujumilk3/leaked-system-prompts](https://github.com/jujumilk3/leaked-system-prompts) | ~14k | Well-organized, includes tool call constraints and persona definitions |
-| [elder-plinius/CL4R1T4S](https://github.com/elder-plinius/CL4R1T4S) | ~14k | Focused on Claude system prompt analysis |
+| [asgeirtj/system_prompts_leaks](https://github.com/asgeirtj/system_prompts_leaks) | ![](https://img.shields.io/github/stars/asgeirtj/system_prompts_leaks?style=flat-square) | ChatGPT, Claude, Gemini system prompts and developer messages |
+| [jujumilk3/leaked-system-prompts](https://github.com/jujumilk3/leaked-system-prompts) | ![](https://img.shields.io/github/stars/jujumilk3/leaked-system-prompts?style=flat-square) | Well-organized, includes tool call constraints and persona definitions |
+| [elder-plinius/CL4R1T4S](https://github.com/elder-plinius/CL4R1T4S) | ![](https://img.shields.io/github/stars/elder-plinius/CL4R1T4S?style=flat-square) | Focused on Claude system prompt analysis |
 
 **What to look for:** how roles are defined, how tool use is constrained, how planning is structured, how refusals are framed, how sub-agents are orchestrated.
 
@@ -379,6 +381,7 @@ The infrastructure layer that wraps an LLM: tool access, lifecycle management, p
 | **Anthropic** | [Building Effective AI Agents](https://www.anthropic.com/research/building-effective-agents) | Agents |
 | **Anthropic** | [Claude Code Best Practices](https://www.anthropic.com/engineering/claude-code-best-practices) | Agentic Coding |
 | **Anthropic** | [Demystifying Evals for AI Agents](https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents) (Jan 2026) | Agent Evals |
+| **Anthropic** | [Quantifying Infrastructure Noise in Agentic Coding Evals](https://www.anthropic.com/engineering/infrastructure-noise) (Mar 2026) | Agent Evals |
 | **OpenAI** | [GPT-4.1 Prompting Guide](https://cookbook.openai.com/examples/gpt4-1_prompting_guide) | Prompting |
 | **OpenAI** | [A Practical Guide to Building Agents](https://cdn.openai.com/business-guides-and-resources/a-practical-guide-to-building-agents.pdf) | Agents |
 | **OpenAI** | [Designing Agents to Resist Prompt Injection](https://openai.com/index/designing-agents-to-resist-prompt-injection/) (2026) | Security |
@@ -458,6 +461,15 @@ The infrastructure layer that wraps an LLM: tool access, lifecycle management, p
 | Paper | Key Contribution |
 |-------|-----------------|
 | [BeSafe-Bench: Behavioral Safety Risks of Situated Agents (2026)](https://arxiv.org/abs/2603.25747) | First benchmark across 4 real functional domains (Web, Mobile, Embodied VLM/VLA) with 9 safety-risk categories; even the best agent completes <40% of tasks under full safety constraints | [PDF](papers/BeSafe_Bench_Agent_Behavioral_Safety_Risks.pdf) |
+| [Agents of Chaos (2026)](https://arxiv.org/abs/2602.20021) | Two-week red-team study of live autonomous agents (email, Discord, shell, persistent memory) — documents 11 real attack categories including cross-agent unsafe practice propagation, identity spoofing, unauthorized resource consumption, and false task completion (32 HF likes) | [PDF](papers/Agents_of_Chaos_Red_Teaming_Autonomous_Agents.pdf) |
+| [Internal Safety Collapse in Frontier LLMs (2026)](https://arxiv.org/abs/2603.23509) | Introduces TVD framework and ISC-Bench — frontier models fail at 95.3% rate on dual-use professional tasks where capability and harm co-occur; advanced models are *more* vulnerable than earlier LLMs because their capabilities become liabilities | [PDF](papers/Internal_Safety_Collapse_Frontier_LLMs.pdf) |
+
+### Self-Improving Agents
+
+| Paper | Key Contribution |
+|-------|-----------------|
+| [OpenClaw-RL: Train Any Agent Simply by Talking (2026)](https://arxiv.org/abs/2603.10165) | Every agent interaction generates a next-state signal (user reply, tool output, GUI state) — OpenClaw-RL recovers all of them as live RL training sources via Hindsight-Guided On-Policy Distillation; one unified policy trains across conversation, terminal, SWE, and GUI tasks simultaneously (145 HF likes) | [PDF](papers/OpenClaw_RL_Train_Any_Agent_Simply_by_Talking.pdf) |
+| [MetaClaw: Just Talk — An Agent That Meta-Learns and Evolves in the Wild (2026)](https://arxiv.org/abs/2603.17187) | Continual meta-learning framework that jointly evolves a base LLM policy and a reusable skill library — skill-driven fast adaptation from failure trajectories + opportunistic gradient updates during idle periods; 21.4% → 40.6% accuracy on benchmarks (134 HF likes) | [PDF](papers/MetaClaw_Agent_Continual_Meta_Learning_Evolves_in_Wild.pdf) |
 
 ### Tool Use
 
@@ -478,7 +490,7 @@ The infrastructure layer that wraps an LLM: tool access, lifecycle management, p
 | Paper | Key Contribution |
 |-------|-----------------|
 | [SWE-CI: Evaluating Agents on Codebase Maintenance via CI (2026)](https://arxiv.org/abs/2603.03823) | First CI-loop benchmark for long-term codebase maintainability — 100 tasks spanning 233 days and 71+ consecutive commits; shifts evaluation from static single-fix to dynamic long-horizon reasoning | [PDF](papers/SWE_CI_Evaluating_Agents_Codebase_Maintenance.pdf) |
-| [SWE-Skills-Bench (2026)](https://arxiv.org/abs/2603.15401) | 565 real-world SE tasks measuring whether agent skills actually improve outcomes — 39/49 public skills give zero gain; average improvement only +1.2%; reveals fundamental gap in skill design |
+| [SWE-Skills-Bench (2026)](https://arxiv.org/abs/2603.15401) | 565 real-world SE tasks measuring whether agent skills actually improve outcomes — 39/49 public skills give zero gain; average improvement only +1.2%; reveals fundamental gap in skill design | [PDF](papers/SWE_Skills_Bench_Agent_Skills_Evaluation.pdf) |
 
 ### Instruction Following
 
