@@ -39,8 +39,10 @@ This repo covers both. The engineering camp gets more space.
   - [Coding & Development](#coding--development)
   - [DevOps & SRE](#devops--sre)
   - [Data Engineering](#data-engineering)
+  - [AI & ML](#ai--ml)
   - [Product & Strategy](#product--strategy)
   - [Legal & Compliance](#legal--compliance)
+  - [Knowledge & Documentation](#knowledge--documentation)
   - [Writing & Academic](#writing--academic)
   - [Learning & Education](#learning--education)
   - [Research & Analysis](#research--analysis)
@@ -103,6 +105,12 @@ All prompts are open — click, copy, use directly.
 | 🔧 Data Engineer | Data pipeline specialist — Medallion Architecture (Bronze/Silver/Gold), PySpark + Delta Lake, dbt contracts, Great Expectations, Kafka streaming (2026) | [prompt](https://github.com/ai-boost/awesome-prompts/blob/main/prompts/data_engineer.md) |
 | 📈 Analytics Engineer | Production data infrastructure — dimensional modeling, dbt, pipeline architecture, data quality testing, metrics definition (2026) | [prompt](https://github.com/ai-boost/awesome-prompts/blob/main/prompts/analytics_engineer.txt) |
 
+### AI & ML
+
+| Name | Description | Prompt |
+|------|-------------|--------|
+| 🤖 ML Systems Architect | Production ML design — data pipelines, training, inference, model evaluation, MLOps, monitoring, cost optimization, LLM fine-tuning (2026) | [prompt](https://github.com/ai-boost/awesome-prompts/blob/main/prompts/ml_systems_architect.txt) |
+
 ### Product & Strategy
 
 | Name | Description | Prompt |
@@ -112,15 +120,23 @@ All prompts are open — click, copy, use directly.
 | 💼 CFO / Financial Strategy | Chief Financial Officer driving capital allocation and enterprise value — FP&A, fundraising, M&A, pricing strategy, board reporting (2026) | [prompt](https://github.com/ai-boost/awesome-prompts/blob/main/prompts/cfo_financial_strategy.txt) |
 | 📊 Sales Strategist | Sales leader optimizing pipeline, win rates, territory planning, deal acceleration — BANT/MEDDIC, quota setting, GTM execution (2026) | [prompt](https://github.com/ai-boost/awesome-prompts/blob/main/prompts/sales_strategist.txt) |
 | 💬 Customer Success Strategist | Account success leader maximizing lifetime value — health scoring, account planning, executive engagement, EBRs, retention & expansion, advocacy programs (2026) | [prompt](https://github.com/ai-boost/awesome-prompts/blob/main/prompts/customer_success_strategist.txt) |
+| 🚀 Growth Hacker | Growth driver using data-driven experimentation — funnel optimization, viral loops, unit economics, A/B testing, activation, retention, acquisition channels (2026) | [prompt](https://github.com/ai-boost/awesome-prompts/blob/main/prompts/growth_hacker.txt) |
 | ⚙️ Operations Manager | Ops leader optimizing processes, reducing costs, enabling scale — Lean, bottleneck analysis, cost structure, systems integration (2026) | [prompt](https://github.com/ai-boost/awesome-prompts/blob/main/prompts/operations_manager.txt) |
 | 🔄 Change Management Leader | Organizational transformation and adoption — stakeholder alignment, communication strategy, training programs, adoption tracking, sustainment, cultural change (2026) | [prompt](https://github.com/ai-boost/awesome-prompts/blob/main/prompts/change_management_leader.txt) |
 | 🎯 Recruitment Strategist | Talent acquisition leader building pipelines and optimizing hiring — sourcing, competency modeling, offer strategy, retention focus (2026) | [prompt](https://github.com/ai-boost/awesome-prompts/blob/main/prompts/recruitment_strategist.txt) |
+| 💬 Community Manager | Community leader building engaged, healthy communities — moderation, engagement loops, advocacy programs, member lifecycle, culture building (2026) | [prompt](https://github.com/ai-boost/awesome-prompts/blob/main/prompts/community_manager.txt) |
 
 ### Legal & Compliance
 
 | Name | Description | Prompt |
 |------|-------------|--------|
 | ⚖️ Legal Analyst | Comprehensive legal research and contract analysis — IRAC methodology, regulatory compliance, litigation risk, IP strategy, M&A due diligence (2026) | [prompt](https://github.com/ai-boost/awesome-prompts/blob/main/prompts/legal_analyst.txt) |
+
+### Knowledge & Documentation
+
+| Name | Description | Prompt |
+|------|-------------|--------|
+| 📚 Knowledge Management Architect | Enterprise knowledge systems — information architecture, documentation standards, AI-powered search, RAG, discoverability, governance, maintenance (2026) | [prompt](https://github.com/ai-boost/awesome-prompts/blob/main/prompts/knowledge_management_architect.txt) |
 
 ### Writing & Academic
 
@@ -146,6 +162,7 @@ All prompts are open — click, copy, use directly.
 |------|-------------|--------|
 | 🔬 Deep Research Agent | Multi-step research system prompt — plan, search, cross-check, synthesize (2025) | [prompt](https://github.com/ai-boost/awesome-prompts/blob/main/prompts/deep_research.txt) |
 | 📊 Data Analysis | Extract insights, flag anomalies, recommend specific visualizations | [prompt](https://github.com/ai-boost/awesome-prompts/blob/main/prompts/data_analysis.txt) |
+| 📈 Data Analyst | Senior analyst translating data into insights — SQL, A/B testing, cohort analysis, metrics, visualization, statistical rigor, actionable recommendations (2026) | [prompt](https://github.com/ai-boost/awesome-prompts/blob/main/prompts/data_analyst.txt) |
 | 🧠 Reasoning Specialist | Structured thinking for complex problems — problem decomposition, CoT reasoning, hypothesis generation, multi-path exploration, confidence assessment (2026) | [prompt](https://github.com/ai-boost/awesome-prompts/blob/main/prompts/reasoning_specialist.txt) |
 | 🎨 Multimodal Analyst | Vision-text-data integration — image analysis, document processing, chart interpretation, scene understanding, cross-modal reasoning (2026) | [prompt](https://github.com/ai-boost/awesome-prompts/blob/main/prompts/multimodal_analyst.txt) |
 | 🗂 Structured Output Extractor | Schema-strict JSON extraction — type safety, null handling, multi-record, self-validation (2026) | [prompt](https://github.com/ai-boost/awesome-prompts/blob/main/prompts/structured_output_extractor.txt) |
@@ -520,6 +537,9 @@ The infrastructure layer that wraps an LLM: tool access, lifecycle management, p
 | Paper | Key Contribution |
 |-------|-----------------|
 | [Experience as a Compass: Multi-Agent RAG with Evolving Orchestration (April 2026)](https://arxiv.org/abs/2604.00901) | HERA: 3-layer hierarchical framework that jointly evolves global orchestration strategies and local agent behaviors using experiential knowledge — role-aware prompt optimization drives targeted improvements for each agent's responsibilities |
+| [LangMARL: Natural Language Multi-Agent Reinforcement Learning (April 2026)](https://arxiv.org/abs/2604.00722) | Brings credit assignment and policy gradient evolution from cooperative MARL into language space — enables LLM agents to autonomously evolve coordination strategies in dynamic environments |
+| [Agent Q-Mix: Selecting the Right Action for LLM Multi-Agent Systems (April 2026)](https://arxiv.org/abs/2604.00344) | Reformulates topology selection as cooperative MARL — each agent selects communication actions that jointly induce round-wise communication graphs; improves coordination efficiency |
+| [Competition and Cooperation of LLM Agents in Games (April 2026)](https://arxiv.org/abs/2604.00487) | LLM agents tend to cooperate in multi-round, non-zero-sum contexts rather than Nash equilibria — insights for designing cooperative multi-agent systems |
 | [G2CP: Graph-Grounded Communication Protocol for Multi-Agent Reasoning (2026)](https://arxiv.org/abs/2602.13370) | Replaces free-text agent messages with explicit graph operations (traversal, subgraph fragments, updates) over a shared knowledge graph — 73% token reduction, 34% accuracy improvement, fully auditable reasoning chains | [PDF](papers/G2CP_Graph_Grounded_Multi_Agent_Communication_Protocol.pdf) |
 | [AdaptOrch: Task-Adaptive Multi-Agent Orchestration (2026)](https://arxiv.org/abs/2602.16873) | Topology selection (parallel/sequential/hierarchical/hybrid) matters more than model choice — AdaptOrch automatically picks the right topology per task; 12–23% improvement over static single-topology baselines across SWE-bench, GPQA, and RAG | [PDF](papers/AdaptOrch_Task_Adaptive_Multi_Agent_Orchestration.pdf) |
 | [The Orchestration of Multi-Agent Systems (2026)](https://arxiv.org/abs/2601.13671) | Systematic academic analysis of MCP and A2A as complementary communication protocols; enterprise-grade multi-agent orchestration architecture covering governance, observability, and organizational adoption patterns | |
@@ -555,10 +575,20 @@ The infrastructure layer that wraps an LLM: tool access, lifecycle management, p
 | [AgeMem: Unified Long- and Short-Term Memory for LLM Agents (2026)](https://arxiv.org/abs/2601.01885) | First to unify LTM (add/update/delete) and STM (retrieve/summarize/filter) as tool-based actions via GRPO RL; 7B model achieves +49.59% over no-memory baseline across 5 benchmarks; ICLR 2026 MemAgents Workshop | [PDF](papers/AgeMem_Unified_Long_Short_Term_Memory_LLM_Agents.pdf) |
 | [MSA: Memory Sparse Attention to 100M Tokens (2026)](https://arxiv.org/abs/2603.23516) | End-to-end trainable sparse attention with linear complexity — scales to 100M tokens on 2×A800 GPUs with <9% degradation vs 16K baseline; Memory Interleaving enables multi-hop reasoning across scattered segments | [PDF](papers/MSA_Memory_Sparse_Attention_100M_Tokens.pdf) |
 
+### Tool Use
+
+| Paper | Key Contribution |
+|-------|-----------------|
+| [Agentic Tool Use in Large Language Models (April 2026)](https://arxiv.org/abs/2604.00835) | Comprehensive framework for understanding tool use in agentic systems — schema understanding, calling conventions, error handling, tool composition patterns |
+| [Open, Reliable, and Collective: A Community-Driven Framework (April 2026)](https://arxiv.org/abs/2604.00137) | OpenTools: standardized tool schemas and lightweight wrappers for plug-and-play use across agent frameworks; intrinsic evaluation suite tracking correctness, robustness, regressions |
+
 ### Agent Evaluation
 
 | Paper | Key Contribution |
 |-------|-----------------|
+| [Agent Psychometrics: Task-Level Performance Prediction (April 2026)](https://arxiv.org/abs/2604.00594) | Shifts evaluation from simple QA to multi-turn agentic assessment; newer benchmarks like SWE-bench Verified and Terminal-Bench test iterative agent behavior with execution feedback |
+| [YC-Bench: Benchmarking AI Agents for Long-Term Planning (April 2026)](https://arxiv.org/abs/2604.01212) | Evaluates whether LLM agents maintain strategic coherence over long horizons — simulated startup over one-year horizon spanning hundreds of turns; tests consistent execution |
+| [When Users Change Their Mind: Evaluating Interruptible Agents (April 2026)](https://arxiv.org/abs/2604.00892) | Tests agent ability to handle user interruptions during mid-task execution — critical requirement for realistic deployment in dynamic environments |
 | [SWE-CI: Evaluating Agents on Codebase Maintenance via CI (2026)](https://arxiv.org/abs/2603.03823) | First CI-loop benchmark for long-term codebase maintainability — 100 tasks spanning 233 days and 71+ consecutive commits; shifts evaluation from static single-fix to dynamic long-horizon reasoning | [PDF](papers/SWE_CI_Evaluating_Agents_Codebase_Maintenance.pdf) |
 | [SWE-Skills-Bench (2026)](https://arxiv.org/abs/2603.15401) | 565 real-world SE tasks measuring whether agent skills actually improve outcomes — 39/49 public skills give zero gain; average improvement only +1.2%; reveals fundamental gap in skill design | [PDF](papers/SWE_Skills_Bench_Agent_Skills_Evaluation.pdf) |
 
