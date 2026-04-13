@@ -84,6 +84,7 @@ All prompts are open — click, copy, use directly.
 | 🔍 Code Reviewer | Security-focused code reviewer — OWASP Top 10, severity grading, fix examples (2026) | [prompt](https://github.com/ai-boost/awesome-prompts/blob/main/prompts/code_reviewer_security.txt) |
 | 🕸 Multi-Agent Orchestrator | Central dispatch agent — task decomposition, parallel delegation, state tracking, error recovery (2026) | [prompt](https://github.com/ai-boost/awesome-prompts/blob/main/prompts/multi_agent_orchestrator.txt) |
 | 🧱 Agent Harness Designer | System prompt for designing reliable agent runtimes — tool minimization, approval gates, memory/compaction, rollback, observability, evals; derived from OpenAI/Anthropic harness guidance (2026) | [prompt](https://github.com/ai-boost/awesome-prompts/blob/main/prompts/agent_harness_designer.txt) |
+| 🖥 Computer Use Operator | System prompt for browser/desktop agents — observe → act → verify loops, least privilege, confirmation gates, phishing/prompt-injection resistance; derived from OpenAI's 2026 computer-use guidance | [prompt](https://github.com/ai-boost/awesome-prompts/blob/main/prompts/computer_use_operator.txt) |
 | 🗄 SQL Assistant | Senior DB engineer — query writing (CTE-first), optimization (EXPLAIN-driven), schema design, multi-dialect (2026) | [prompt](https://github.com/ai-boost/awesome-prompts/blob/main/prompts/sql_assistant.txt) |
 | 🐛 Debugging Agent | Systematic bug hunter — reproduce → observe → hypothesize → test → localize → fix; works for any language (2026) | [prompt](https://github.com/ai-boost/awesome-prompts/blob/main/prompts/debugging_agent.txt) |
 | 🏗 System Design | Staff-level architect — clarifies requirements first, capacity estimation, component trade-offs, failure modes (2026) | [prompt](https://github.com/ai-boost/awesome-prompts/blob/main/prompts/system_design.txt) |
@@ -224,6 +225,7 @@ All prompts are open — click, copy, use directly.
 | ⚛ Meta Prompt | Meta-Expert orchestrates specialist sub-agents to solve complex problems | [prompt](https://github.com/ai-boost/awesome-prompts/blob/main/prompts/meta_prompt.txt) |
 | 📓 Prompt Creator | Auto-generates high-quality prompts from a brief description | [prompt](https://github.com/ai-boost/awesome-prompts/blob/main/prompts/Prompt%20Creater.md) |
 | 🧪 Eval & Benchmark Architect | Benchmark design, evaluation metrics, rubric development, failure mode analysis, continuous monitoring — regression testing, cost-effective evaluation (2026) | [prompt](https://github.com/ai-boost/awesome-prompts/blob/main/prompts/eval_benchmark_architect.txt) |
+| 📏 Agent Eval Designer | Evaluation prompt for real-world agents — task suites, noise audits, reproducibility, intervention/safety metrics, failure taxonomy; derived from Anthropic's 2026 eval guidance | [prompt](https://github.com/ai-boost/awesome-prompts/blob/main/prompts/agent_eval_designer.txt) |
 | 🔬 Prompt Engineer | Production prompt engineering — design patterns (CoT/ToT/ReAct), A/B testing, token optimization, multi-model routing, versioning, regression testing (2026) | [prompt](https://github.com/ai-boost/awesome-prompts/blob/main/prompts/prompt_engineer.txt) |
 
 ### Image & Video Generation
@@ -412,6 +414,7 @@ Context engineering is the practice of designing *what* goes into an LLM's conte
 | [**CrewAI**](https://docs.crewai.com/) | CrewAI | Role-based multi-agent teams |
 | [**Magentic-One**](https://arxiv.org/abs/2411.04468) | Microsoft | Multi-capability agents (web + file + code + terminal) |
 | [**OpenAI Agents SDK**](https://openai.github.io/openai-agents-python/) | OpenAI | OpenAI-native orchestration (Mar 2025) |
+| [**OpenAI Agents SDK for JS/TS**](https://github.com/openai/openai-agents-js) | OpenAI | Official JavaScript/TypeScript agent SDK — workflows, handoffs, guardrails, tracing, MCP, realtime and voice support (2026) ![](https://img.shields.io/github/stars/openai/openai-agents-js?style=flat-square) |
 | [**GitHub Agentic Workflows (gh-aw)**](https://github.com/github/gh-aw) | GitHub | Security-first agentic workflows for GitHub Actions — Markdown workflow specs, sandboxed execution, structured outputs, approval-aware automation (2026) ![](https://img.shields.io/github/stars/github/gh-aw?style=flat-square) |
 | [**Google ADK**](https://google.github.io/adk-docs/) | Google | Gemini-native development (Apr 2025) |
 | [**Claude Code**](https://docs.anthropic.com/en/docs/claude-code) | Anthropic | Agentic coding with Agent Teams (Feb 2026) |
@@ -666,6 +669,8 @@ The infrastructure layer that wraps an LLM: tool access, lifecycle management, p
 | [When Users Change Their Mind: Evaluating Interruptible Agents (April 2026)](https://arxiv.org/abs/2604.00892) | Tests agent ability to handle user interruptions during mid-task execution — critical requirement for realistic deployment in dynamic environments |
 | [SWE-CI: Evaluating Agents on Codebase Maintenance via CI (2026)](https://arxiv.org/abs/2603.03823) | First CI-loop benchmark for long-term codebase maintainability — 100 tasks spanning 233 days and 71+ consecutive commits; shifts evaluation from static single-fix to dynamic long-horizon reasoning | [PDF](papers/SWE_CI_Evaluating_Agents_Codebase_Maintenance.pdf) |
 | [SWE-Skills-Bench (2026)](https://arxiv.org/abs/2603.15401) | 565 real-world SE tasks measuring whether agent skills actually improve outcomes — 39/49 public skills give zero gain; average improvement only +1.2%; reveals fundamental gap in skill design | [PDF](papers/SWE_Skills_Bench_Agent_Skills_Evaluation.pdf) |
+| [LongCLI-Bench: A Benchmark for Long-Horizon Agentic Programming in the CLI (2026)](https://arxiv.org/abs/2602.14337) | Benchmarks terminal-based coding agents on long-horizon programming tasks that require sustained planning, repo navigation, debugging, and recovery over many steps instead of single-fix patches | [PDF](papers/LongCLI_Bench_Long_Horizon_Agentic_Programming_CLI.pdf) |
+| [ProjDevBench: Benchmarking AI Agents on End-to-End Software Project Development (2026)](https://arxiv.org/abs/2602.01655) | Evaluates whether agents can build complete software projects from requirements to implementation and validation, rather than solving isolated bug-fix tasks; targets end-to-end project delivery realism | [PDF](papers/ProjDevBench_End_to_End_Project_Development.pdf) |
 
 ### Instruction Following
 
