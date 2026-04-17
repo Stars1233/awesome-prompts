@@ -129,12 +129,15 @@ All prompts are open — click, copy, use directly.
 |------|-------------|--------|
 | 🤖 ML Systems Architect | Production ML design — data pipelines, training, inference, model evaluation, MLOps, monitoring, cost optimization, LLM fine-tuning (2026) | [prompt](https://github.com/ai-boost/awesome-prompts/blob/main/prompts/ml_systems_architect.txt) |
 | 🧬 LLM Architect | LLM systems — fine-tuning (LoRA/QLoRA/RLHF/DPO), RAG architecture, serving (vLLM/TGI), quantization (GPTQ/AWQ), safety guardrails, multi-model orchestration (2026) | [prompt](https://github.com/ai-boost/awesome-prompts/blob/main/prompts/llm_architect.txt) |
+| 🎙 Realtime Voice Agent Architect | Enterprise voice agent design — sub-1s TTFA, streaming STT→LLM→TTS, turn-taking, barge-in handling, voice-optimized prompts, confirmation gates (2026) | [prompt](https://github.com/ai-boost/awesome-prompts/blob/main/prompts/realtime_voice_agent_architect.txt) |
+| 🎨 Multimodal Agent Designer | Cross-modal agent architecture — active perception, visual/audio grounding, token-efficient context management, modality-aware tool design, GUI automation (2026) | [prompt](https://github.com/ai-boost/awesome-prompts/blob/main/prompts/multimodal_agent_designer.txt) |
 
 ### Product & Strategy
 
 | Name | Description | Prompt |
 |------|-------------|--------|
 | 🧭 Product Manager | Full product lifecycle — discovery to launch; PRD template, RICE scoring, Now/Next/Later roadmap, GTM brief, outcome measurement (2026) | [prompt](https://github.com/ai-boost/awesome-prompts/blob/main/prompts/product_manager.md) |
+| 🧠 AI-Native Product Architect | AI-first product design — agentic workflows, generative UI, human-in-the-loop at the right level, self-improving loops, trust & transparency architecture (2026) | [prompt](https://github.com/ai-boost/awesome-prompts/blob/main/prompts/ai_native_product_architect.txt) |
 | 🎯 UX Research Specialist | Research methodology and user insights — qualitative interviews, usability testing, survey design, metrics analysis, journey mapping, stakeholder communication (2026) | [prompt](https://github.com/ai-boost/awesome-prompts/blob/main/prompts/ux_research_specialist.txt) |
 | 💼 CFO / Financial Strategy | Chief Financial Officer driving capital allocation and enterprise value — FP&A, fundraising, M&A, pricing strategy, board reporting (2026) | [prompt](https://github.com/ai-boost/awesome-prompts/blob/main/prompts/cfo_financial_strategy.txt) |
 | 📊 Sales Strategist | Sales leader optimizing pipeline, win rates, territory planning, deal acceleration — BANT/MEDDIC, quota setting, GTM execution (2026) | [prompt](https://github.com/ai-boost/awesome-prompts/blob/main/prompts/sales_strategist.txt) |
@@ -451,6 +454,7 @@ Context engineering is the practice of designing *what* goes into an LLM's conte
 | [**Goose**](https://github.com/block/goose) | Block | Local AI engineering agent — code, debug, install deps, execute, orchestrate workflows; MCP integration (3000+ tools); Apache 2.0; AAIF founding project (2026) ![](https://img.shields.io/github/stars/block/goose?style=flat-square) |
 | [**Gemini CLI**](https://github.com/google-gemini/gemini-cli) | Google | Open-source terminal AI agent — ReAct loop, MCP support, 1M context window, Gemini 2.5 Pro/3 Flash/3.1 Pro; free tier (60 req/min); Apache 2.0; v2.0 Apr 2026 ![](https://img.shields.io/github/stars/google-gemini/gemini-cli?style=flat-square) |
 | [**oh-my-codex**](https://github.com/Yeachan-Heo/oh-my-codex) | Yeachan Heo | Workflow and plugin layer for coding agents — hooks, agent teams, HUDs, parallel multi-agent execution, notification routing; 23k+ stars (2026) ![](https://img.shields.io/github/stars/Yeachan-Heo/oh-my-codex?style=flat-square) |
+| [**Hermes Agent**](https://github.com/NousResearch/hermes-agent) | Nous Research | Self-improving agent framework built on Hermes 3 — persistent memory across sessions, learns from interactions, multi-platform messaging; 32k+ stars (2026) ![](https://img.shields.io/github/stars/NousResearch/hermes-agent?style=flat-square) |
 
 > **Feb 2026 multi-agent wave:** In a two-week window, Claude Code Agent Teams, Windsurf parallel agents (5), Grok Build (8 agents), Codex CLI, and Devin parallel sessions all shipped simultaneously — multi-agent is now the baseline, not a feature.
 
@@ -702,6 +706,7 @@ The infrastructure layer that wraps an LLM: tool access, lifecycle management, p
 | [SWE-Skills-Bench (2026)](https://arxiv.org/abs/2603.15401) | 565 real-world SE tasks measuring whether agent skills actually improve outcomes — 39/49 public skills give zero gain; average improvement only +1.2%; reveals fundamental gap in skill design | [PDF](papers/SWE_Skills_Bench_Agent_Skills_Evaluation.pdf) |
 | [LongCLI-Bench: A Benchmark for Long-Horizon Agentic Programming in the CLI (2026)](https://arxiv.org/abs/2602.14337) | Benchmarks terminal-based coding agents on long-horizon programming tasks that require sustained planning, repo navigation, debugging, and recovery over many steps instead of single-fix patches | [PDF](papers/LongCLI_Bench_Long_Horizon_Agentic_Programming_CLI.pdf) |
 | [ProjDevBench: Benchmarking AI Agents on End-to-End Software Project Development (2026)](https://arxiv.org/abs/2602.01655) | Evaluates whether agents can build complete software projects from requirements to implementation and validation, rather than solving isolated bug-fix tasks; targets end-to-end project delivery realism | [PDF](papers/ProjDevBench_End_to_End_Project_Development.pdf) |
+| [LiveClawBench: Benchmarking LLM Agents on Complex, Real-World Assistant Tasks (April 2026)](https://arxiv.org/abs/2604.13072) | Evaluates agents on compositional, real-world assistant tasks requiring planning, tool use, and recovery — closer to production deployment scenarios than static QA benchmarks | [PDF](papers/LiveClawBench_Real_World_Assistant_Tasks.pdf) |
 
 ### Instruction Following
 
@@ -716,12 +721,19 @@ The infrastructure layer that wraps an LLM: tool access, lifecycle management, p
 |-------|-----------------|
 | [Graph-of-Mark: Spatial Reasoning via Visual Prompting (2026)](https://arxiv.org/abs/2603.06663) | Overlays scene graphs onto input images at the pixel level to model object relationships — up to +11 percentage points on VQA and localization across 4 datasets, zero-shot | [PDF](papers/Graph_of_Mark_Spatial_Reasoning_Multimodal_Visual_Prompting.pdf) |
 | [Look Twice: Training-Free Evidence Highlighting in MLLMs (April 2026)](https://arxiv.org/abs/2604.01280) | Inference-time framework exploiting MLLM attention patterns to identify relevant visual regions and text, then re-conditions generation on highlighted evidence — consistent VQA improvements, no training required | [PDF](papers/Look_Twice_Training_Free_Evidence_Highlighting_MLLMs.pdf) |
+| [Agentic-MME: What Agentic Capability Really Brings to Multimodal Intelligence? (April 2026)](https://arxiv.org/abs/2604.03016) | Systematic evaluation of agentic capability in multimodal LLMs — decomposes tasks into perception, reasoning, and action levels; reveals where agentic loops help vs. where they add overhead | [PDF](papers/Agentic_MME_Multimodal_Intelligence.pdf) |
 
 ### Embodied AI & World Models
 
 | Paper | Key Contribution |
 |-------|-----------------|
 | [VLA-World: Vision-Language-Action World Models for Autonomous Driving (April 2026)](https://arxiv.org/abs/2604.09059) | Unifies predictive imagination with reflective reasoning for driving foresight — action-derived trajectory guides next-frame generation, then reasons over the imagined frame to refine planning | [PDF](papers/VLA_World_Vision_Language_Action_World_Models.pdf) |
+
+### Voice & Realtime Agents
+
+| Paper | Key Contribution |
+|-------|-----------------|
+| [Building Enterprise Realtime Voice Agents from Scratch (2026)](https://arxiv.org/abs/2603.05413) | Salesforce AI Research: complete tutorial for production voice agents — cascaded streaming pipeline (STT→LLM→TTS), ~750ms TTFA, function calling, full open-source codebase with 9 chapters | [PDF](papers/Building_Enterprise_Realtime_Voice_Agents.pdf) |
 
 **Curated reading list:** [The 2025 AI Engineering Reading List — Latent Space](https://www.latent.space/p/2025-papers)
 
